@@ -18,6 +18,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -284,6 +285,9 @@ public class NoApplet extends JPanel {
         frame.setTitle(getClass().getSimpleName());
         frame.setResizable(false);
         frame.setVisible(true);
+//        frame.setIconImage(
+//        		new ImageIcon(getClass().getClassLoader().getResource("/resources/"))
+//        		);
         init();
         start();
     }
