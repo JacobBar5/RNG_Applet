@@ -18,11 +18,13 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+//import javax.swing.ImageIcon;
+//import java.awt.Image;
 
 /** 
  * A special panel class to provide Applet-like APIs including the life-cycle methods.
@@ -53,7 +55,7 @@ import javax.swing.JPanel;
  * @author cheon
  * 
  * -- Note: This code is taken as a base from an old assignment I had 
- *           original code written by Prof. Cheon   
+ *           original code written by Prof. Cheon
  */
 
 @SuppressWarnings("serial")
@@ -285,9 +287,6 @@ public class NoApplet extends JPanel {
         frame.setTitle(getClass().getSimpleName());
         frame.setResizable(false);
         frame.setVisible(true);
-//        frame.setIconImage(
-//        		new ImageIcon(getClass().getClassLoader().getResource("/resources/"))
-//        		);
         init();
         start();
     }
