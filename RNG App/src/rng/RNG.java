@@ -13,6 +13,7 @@
 
 package rng;
 
+import secretes.*; 
 import noapplet.NoApplet;
 
 import javax.swing.JButton;
@@ -196,7 +197,7 @@ public class RNG extends NoApplet{
         		
         		try {
         			Desktop desktop = Desktop.getDesktop();
-        			desktop.browse(new URI("https://twitter.com/tvjunkle/status/1154571670440611840?s=21"));
+        			desktop.browse(new URI("https://media.discordapp.net/attachments/371651981040943106/659486137500303387/image0.gif"));
         			showStatus("Launching...");
         		} catch (Exception e) {
         			e.printStackTrace();
@@ -240,8 +241,16 @@ public class RNG extends NoApplet{
         		}
         	}
         	
+//        	secretes.Secretes.easter_eggs(min,max);
+        	
         	// actual rng element of the applet
-        	else{
+//        	else{
+        	if(min == null || max == null) {
+        		JOptionPane.showMessageDialog(null, 
+        				"Please make sure both entries have a value",
+        				"RNG: ERROR", JOptionPane.WARNING_MESSAGE);
+        	}
+        	else {
         		int min_n = Integer.parseInt(min);
         		int max_n = Integer.parseInt(max);
         		
@@ -262,7 +271,10 @@ public class RNG extends NoApplet{
         			else if(x == 1337){
         				showStatus("Yeet! Poggers In Chat My Guy");
         			}
-        			else if(x != 69 && x != 420 && x != 1337){
+        			else if(x == 666){
+        				showStatus("RIP and Tear");
+        			}
+        			else if(x != 69 || x != 420 || x != 1337 || x != 666){
         				showStatus("");
         			}
         			UIManager.put("OptionPane.minimumSize",new Dimension(25,50));
@@ -274,6 +286,7 @@ public class RNG extends NoApplet{
         					"RNG", JOptionPane.PLAIN_MESSAGE);
         		}	
         	}
+        	
         	System.out.println("Random Number Generated");
         });
         
